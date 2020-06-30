@@ -15,11 +15,15 @@ public class HealthCareActivity extends AppCompatActivity {
     private GridView Grid_View;
 
     String[] web = {
-            "CCC"
+            "DCH",
+            "DCHC",
+            "DCCC"
 
     };
     int[] imageId = {
             R.drawable.healthcarecenters,
+            R.drawable.healthcarecenters,
+            R.drawable.healthcarecenters
 
     };
 
@@ -50,8 +54,18 @@ public class HealthCareActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         Intent intent0 = new Intent(HealthCareActivity.this, HealthCareListActivity.class);
-                        intent0.putExtra("type", "data");
+                        intent0.putExtra("type", "dch");
                         startActivity(intent0);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(HealthCareActivity.this, HealthCareListActivity.class);
+                        intent1.putExtra("type", "dchc");
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(HealthCareActivity.this, HealthCareListActivity.class);
+                        intent2.putExtra("type", "dccc");
+                        startActivity(intent2);
                         break;
 
                 }

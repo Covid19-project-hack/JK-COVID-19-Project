@@ -48,6 +48,7 @@ public class HealthCareListAdapter extends RecyclerView.Adapter<HealthCareListAd
 
         holder.District.setText(persons.getDistrict());
         holder.Hospital.setText(persons.getName());
+        holder.Type.setText(persons.getType());
 
     }
 
@@ -95,13 +96,14 @@ public class HealthCareListAdapter extends RecyclerView.Adapter<HealthCareListAd
 
     public class ImageViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView District, Hospital;
+        private TextView District, Hospital, Type;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
 
             District = itemView.findViewById(R.id.district);
             Hospital = itemView.findViewById(R.id.hospital);
+            Type = itemView.findViewById(R.id.type);
 
         }
     }
